@@ -7,21 +7,21 @@ public class P1110 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = a / 10;
-		int c = a % 10;
+		int A = sc.nextInt();
+		int b = A / 10;
+		int c = A % 10;
 		int d = 0;
-		int sum = 0;
 		int result = 0;
 		
 			while(true){
 				
 				d = b + c;
 				b = c;
-				sum = (b * 10) + (d % 10);
+				c = d % 10;
+				int sum = (b * 10) + (c);
 				result++;
-				
-				if(a == sum) {
+
+				if(A == sum) {
 					
 					break;
 				}			
