@@ -18,7 +18,8 @@ public class P10809 {
 			
 			if(abc.charAt(i) >= 97 && abc.charAt(i) <= 122) {
 				
-				if(arr[i] == -1) {
+				if(arr[((int)abc.charAt(i))-97] == -1) {
+					//System.out.println(arr[((int)abc.charAt(i))-97]);
 					arr[((int)abc.charAt(i))-97]=i;
 				}
 			}
