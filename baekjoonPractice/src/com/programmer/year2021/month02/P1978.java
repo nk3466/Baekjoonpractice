@@ -9,20 +9,24 @@ public class P1978 {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int count = 0;
-		int t = 0;
+		
 		
 		for(int i = 0; i < N; i++) {
 			int a = sc.nextInt();
-			if(a != 1) {
-				for(int j = 1; j < a; j++) {
-				if(a % j != 0) {
-					t = 1;
-				}
-				
+			int t = 0;
+			
+				for(int j = 1; j <= a; j++) {
+				if(a % j == 0) {	//나머지가 0이면
+					t++;	//확인용 더하기
+					//System.out.println("j = "+ j);	//나누는 수 확인
+					//System.out.println("t = " +t);	//확인용 확인
 			}
 				
 		}
-			count += t;
+				if(t == 2) {	// 나눠지는 수가 자기자신과 1뿐인 수라면
+					
+					count++;	//세자!
+				}
 	}
 		System.out.println(count);
 	}
