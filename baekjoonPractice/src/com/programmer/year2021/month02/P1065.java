@@ -9,29 +9,37 @@ public class P1065 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		
-		if(a < 100) {
+		if(a < 100) {				//입력 받은 수가 100보다작으면 자신을 출력
 			System.out.println(a);
 		}else {
 			
-			int result = 99;
-			
-			for(int i = 100; i < a; ++i) {
-				result += check(i);
-			}
-			
-			if( a == 100) {
-				result--;
-				System.out.println(result);
+			if( a == 1000) {			//1000일 경우 등차수열이 아니므로 999 까지 확인
+				System.out.println(check(999));
+			}else {
+				
+			System.out.println(check(a));
 			}
 		}
+	}
 		
-		/*
-		 * public int check(int n) { int num1 = n / 100 % 10; int num2 = n / 10 % 10;
-		 * int num3 = n % 10;
-		 * 
-		 * if(num2 * 2 == num1 + 3) { return 1; } return 0; }
-		 */
-
+		
+		  public static int check(int n) {
+			  
+		  int result = 99;				//100이상의 수가 들어오면 한수의 갯수는 최소 99개
+		
+		  for(int i = 100; i <= n; i++) {
+		  int num1 = (i / 100); 		//백의 자리수
+		  int num2 = (i / 10) % 10;		//십의 자리수
+		  int num3 = i % 10;			//일의 자리수
+		 
+		  if((num1 - num2) == (num2 - num3)) { //자리수가 수열을 이루면
+			 result++; 
+			  } 
+		  }
+		  return result; 
+		 
+		  
+		  }
 	}
 
-}
+
