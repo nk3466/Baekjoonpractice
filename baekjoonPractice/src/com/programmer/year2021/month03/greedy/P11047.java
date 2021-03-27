@@ -18,7 +18,7 @@ public class P11047 {
 		}
 
 		
-			for(int i = N-1; i >= 0; i--) {
+			for(int i = N-1; i >= 0; i--) {				//제일 큰수부터 K보다 큰경우 뺄수 있을 때까지 빼며 횟수 계산
 				int check = 0;
 				if(arr[i] <= K) {
 					check = K / arr[i];
