@@ -1,15 +1,18 @@
 package com.programmer.year2021.month03.greedy;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class P1541 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String a[] = sc.nextLine().split("\\-");
+		
+		String a[] = br.readLine().split("\\-");
 		
 		int result = 0;
 		
