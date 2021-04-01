@@ -12,7 +12,7 @@ public class P1924 {
 		
 		int day = 0;
 		
-		for(int i = 1; i < x; i++) {
+		for(int i = 1; i < x; i++) {				//월에 따라 일수를 더해줌(x 전월 까지 더해줌)
 			if(i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
 				day += 31;
 			}else if(i == 4 || i == 6 || i == 9 || i == 11) {
@@ -21,8 +21,8 @@ public class P1924 {
 				day += 28;
 			}
 		}
-		day += y;
-		if(day % 7 == 1) {
+		day += y;			//x월의 일수 더해주기
+		if(day % 7 == 1) {				//7로 나눈 나머지로 요일 파악하기
 			System.out.println("MON");
 		}else if(day % 7 == 2) {
 			System.out.println("TUE");

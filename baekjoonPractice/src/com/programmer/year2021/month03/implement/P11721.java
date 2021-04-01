@@ -10,17 +10,17 @@ public class P11721 {
 		
 		String st = sc.nextLine();
 		int ind = 0;
-		int count = (int) Math.floor((double)st.length()/10);
+		int count = st.length()/10;		//10으로 나눈 몫 구하기
 		
 		
-		for(int i = 0; i < count ; i++) {
+		for(int i = 0; i < count ; i++) {			//10개씩 끊어서 출력
 			for(int j = 0; j < 10; j++) {
 				System.out.print(st.charAt(ind));
 				ind++;				
 			}
 			System.out.println();
 		}
-		for(int i = ind;i < st.length(); i++) {
+		for(int i = ind;i < st.length(); i++) {		//나머지 출력
 			System.out.print(st.charAt(i));
 		}
 	}
