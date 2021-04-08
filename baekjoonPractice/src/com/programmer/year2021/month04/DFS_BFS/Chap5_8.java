@@ -17,7 +17,7 @@ public class Chap5_8 {
 		
 		// 노드 1에 연결된 노드 정보 저장 
 		graph.get(1).add(4);
-		graph.get(1).add(3);
+		graph.get(1).add(4);
 		graph.get(1).add(8);
 		
 		// 노드 2에 연결된 노드 정보 저장 
