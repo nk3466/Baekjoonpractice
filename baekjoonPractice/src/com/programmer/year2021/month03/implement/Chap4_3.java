@@ -2,10 +2,8 @@ package com.programmer.year2021.month03.implement;
 
 import java.util.Scanner;
 
-import org.junit.Test;
-
 public class Chap4_3 {
-	@Test
+	//@Test
 	public void Chap4_3() {
 		Scanner sc = new Scanner(System.in);
 		
