@@ -3,7 +3,7 @@ package com.programmer.year2021.month04;
 import java.util.Scanner;
 
 public class P14501 {
-
+//
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
