@@ -7,7 +7,7 @@ public class Chap5_10 {
 	static int N;
 	static int M;
 	
-	static int arr[][]= new int[N][M];
+	static int arr[][]= new int[1000][1000];
 	
 	public static void main(String[] args) {
 	
