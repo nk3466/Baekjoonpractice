@@ -5,9 +5,7 @@ public class Test {
 	
 		class Solution {
 		    public int[] solution(int[][] v) {
-		       
-		        
-		        
+//		        
 		        int x = 0;
 		        int y = 0;
 		        
