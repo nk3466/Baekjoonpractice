@@ -20,7 +20,7 @@ public class P11656 {
 	        // 알파벳순 정렬
 	        for(String str : strArray) {
 	           System.out.println(str);
-	        }
+	        }//
 	}
 
 }
