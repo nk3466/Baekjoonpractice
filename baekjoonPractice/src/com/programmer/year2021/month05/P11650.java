@@ -12,7 +12,7 @@ public class P11650 {
 			
 			int n= sc.nextInt();
 			
-			int arr[][]=new int[n][2]; //x좌표 y좌표
+			int arr[][]=new int[n][2]; //x좌표 y좌표//
 			
 			for(int i=0;i<arr.length;i++) {
 				for(int j=0;j<arr[i].length;j++) {
