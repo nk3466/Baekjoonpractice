@@ -14,7 +14,7 @@ public class P10953 {
 			arr = sc.nextLine().split(",");
 			
 			System.out.println(Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]));
-			
+			//
 			
 		}
 	}
