@@ -30,7 +30,7 @@ public class P7568 {
  
 			System.out.print(rank + " ");
 		}
- 
+ //
 	}
 
 }
