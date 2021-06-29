@@ -7,6 +7,7 @@ public class P11656 {
 
 	public static void main(String[] args) {
 
+
 			Scanner sc = new Scanner(System.in);
 			String abc = sc.nextLine();
 			
@@ -22,5 +23,6 @@ public class P11656 {
 		           System.out.println(str);
 		        }//
 		}
+
 
 }

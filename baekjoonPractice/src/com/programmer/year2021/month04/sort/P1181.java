@@ -1,36 +1,44 @@
 package com.programmer.year2021.month04.sort;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class P1181 {
 
-	public static void main(String[] args) {
-		 
-		Scanner in = new Scanner(System.in);
+    public static void main(String args[]) throws Exception {
+    	Scanner sc = new Scanner(System.in);
+		final int N = Integer.parseInt(sc.nextLine());
 		
-		int N = in.nextInt();
+        //단어의 중복을 제거하기 위해 set을 사용
+		HashSet<String> set = new HashSet<String>();
 		
-		int[][] arr = new int[N][2];
+		for(int i = 0; i < N ; i++)
+			set.add(sc.nextLine());
 		
-		for(int i = 0; i < N; i++) {
-			arr[i][0] = in.nextInt();
-			arr[i][1] = in.nextInt();
-		}
+        //set을 list로 변환
+		ArrayList<String> list = new ArrayList<String>(set);
 		
-		Arrays.sort(arr, (e1, e2) -> {
-			if(e1[0] == e2[0]) {
-				return e1[1] - e2[1];
-			} else {
-				return e1[0] - e2[0];
+        //Collections와 new Comparator를 통해 커스텀 정렬
+		Collections.sort(list, new Comparator<String>() {
+
+			public int compare(String o1, String o2) {
+            
+            	//문자열 길이 비교 (1)
+				if(o1.length() > o2.length())
+					return 1;
+                //문자열 길이 비교 (2)
+				else if(o1.length() < o2.length())
+					return -1;
+                //문자열 길이가 같으면 알파벳순 정렬
+				else
+					return o1.compareTo(o2);
 			}
 		});
 		
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < N; i++) {
-			sb.append(arr[i][0] + " " + arr[i][1]).append('\n');
-		}
-		System.out.println(sb);
+		for(String s : list)
+			System.out.println(s);
 	}
-
 }
